@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paylance - 프리랜서 월급 솔루션</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            --toss-blue: #3182F6;
+            --toss-bg: #F9FAFB;
+            --text-primary: #191F28;
+            --text-secondary: #4E5968;
+            --text-tertiary: #8B95A1;
+        }
+        body { 
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            color: var(--text-primary);
+            word-break: keep-all;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* 토스 스타일 목업 프레임 */
+        .mockup-frame {
+            width: 300px; /* 목업 크기 약간 확대 */
+            aspect-ratio: 9 / 19.5;
+            background-color: #FFFFFF;
+            border-radius: 48px;
+            border: 12px solid #FFFFFF;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.12);
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+        .mockup-frame:hover { transform: translateY(-10px); }
+        .mockup-frame img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .placeholder {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            height: 100%; background: #F2F4F6; color: #B0B8C1; font-weight: 600; text-align: center;
+            font-size: 16px; /* 플레이스홀더 폰트 키움 */
+        }
+
+        /* Animation */
+        .fade-up {
+            opacity: 0; transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .visible { opacity: 1; transform: translateY(0); }
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+    </style>
+</head>
+<body class="bg-white text-lg"> <nav class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100/50">
+        <div class="max-w-screen-lg mx-auto px-6 h-18 flex justify-between items-center py-4">
+            <span class="text-[#3182F6] font-bold text-2xl tracking-tight">Paylance</span>
+            <a href="#apply" class="bg-[#3182F6] hover:bg-[#1B64DA] text-white text-base font-semibold px-6 py-3 rounded-full transition-colors">
+                사전 알림 받기
+            </a>
+        </div>
+    </nav>
+
+    <section class="pt-44 pb-28 px-6 overflow-hidden">
+        <div class="max-w-screen-lg mx-auto text-center">
+            <div class="scroll-animate fade-up">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8 text-[#191F28]">
+                    들쭉날쭉한 배달 수입,<br>
+                    <span class="text-[#3182F6]">매월 25일 월급</span>으로.
+                </h1>
+                <p class="text-xl md:text-2xl text-[#4E5968] mb-16 leading-relaxed">
+                    비수기에도, 사고가 나도 걱정 없도록.<br>
+                    사장님의 현금 흐름을 지켜드릴게요.
+                </p>
+            </div>
+            
+            <div class="relative z-10 scroll-animate fade-up delay-200">
+                <div class="mockup-frame border-[#F9FAFB] ring-1 ring-black/5">
+                    <div class="placeholder">
+                        <span class="text-5xl mb-4">🏠</span>
+                        홈 대시보드 UI<br>이미지 영역
+                    </div>
+                </div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl -z-10 opacity-60"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-36 bg-[#F9FAFB]">
+        <div class="max-w-screen-md mx-auto px-6">
+            <div class="text-center mb-24 scroll-animate fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">"열심히 일하는데,<br>왜 통장은 늘 불안할까요?"</h2>
+                <p class="text-xl text-[#4E5968]">불규칙한 소득 때문에 겪었던 고민들입니다.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-10 rounded-[32px] shadow-sm hover:shadow-md transition duration-300 scroll-animate fade-up delay-100">
+                    <span class="text-5xl block mb-6">📉</span>
+                    <h3 class="text-2xl font-bold mb-3">계획 없는 생활비</h3>
+                    <p class="text-[#6B7684] leading-relaxed text-lg">"이번 달 카드값 낼 수 있을까? 비 오면 벌고 안 오면 못 버니 계획을 세울 수가 없어요."</p>
+                </div>
+                <div class="bg-white p-10 rounded-[32px] shadow-sm hover:shadow-md transition duration-300 scroll-animate fade-up delay-200">
+                    <span class="text-5xl block mb-6">🏦</span>
+                    <h3 class="text-2xl font-bold mb-3">높은 대출 문턱</h3>
+                    <p class="text-[#6B7684] leading-relaxed text-lg">"소득 증빙이 어려워 1금융권은 꿈도 못 꿔요. 어쩔 수 없이 고금리를 써야 했죠."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-36 bg-white">
+        <div class="max-w-screen-lg mx-auto px-6 flex flex-col md:flex-row items-center gap-20 md:gap-32">
+            <div class="md:w-1/2 text-center md:text-left scroll-animate fade-up">
+                <span class="text-[#3182F6] font-bold text-xl mb-5 block">맞춤 분석</span>
+                <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-8">
+                    내 운행 기록을 분석해<br>
+                    <span class="text-[#3182F6]">딱 맞는 월급</span>을 찾아요.
+                </h2>
+                <p class="text-[#4E5968] text-xl leading-relaxed">
+                    최근 3개월의 배달 정산 데이터를 AI가 분석합니다.<br>
+                    안정형부터 도전형까지, 내 상황에 가장 적합한 월급 시나리오를 직접 선택해보세요.
+                </p>
+            </div>
+            <div class="md:w-1/2 scroll-animate fade-up delay-200">
+                <div class="mockup-frame bg-[#F2F4F6]">
+                    <div class="placeholder">
+                        <span class="text-5xl mb-4">📊</span>
+                        시나리오 선택 UI<br>이미지 영역
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-36 bg-[#F9FAFB]">
+        <div class="max-w-screen-lg mx-auto px-6 flex flex-col md:flex-row-reverse items-center gap-20 md:gap-32">
+            <div class="md:w-1/2 text-center md:text-left scroll-animate fade-up">
+                <span class="text-[#3182F6] font-bold text-xl mb-5 block">비상금 버퍼</span>
+                <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-8">
+                    많이 벌면 보관하고,<br>
+                    부족하면 채워드려요.
+                </h2>
+                <p class="text-[#4E5968] text-xl leading-relaxed mb-10">
+                    목표 월급보다 더 번 돈은 '저수지'에 보관됩니다.<br>
+                    수입이 적은 달에는 저수지에서 부족분을 채워<br>
+                    약속한 날짜에 100% 월급을 입금해 드립니다.
+                </p>
+                <div class="inline-flex items-center gap-3 bg-blue-50 text-[#3182F6] px-5 py-3 rounded-full font-bold text-base">
+                    <span>💧</span> Paylance만의 안전 장치
+                </div>
+            </div>
+            <div class="md:w-1/2 scroll-animate fade-up delay-200">
+                <div class="mockup-frame">
+                    <div class="placeholder">
+                        <span class="text-5xl mb-4">💧</span>
+                        버퍼 강조 UI<br>이미지 영역
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-36 bg-white">
+        <div class="max-w-screen-lg mx-auto px-6 flex flex-col md:flex-row items-center gap-20 md:gap-32">
+            <div class="md:w-1/2 text-center md:text-left scroll-animate fade-up">
+                <span class="text-[#3182F6] font-bold text-xl mb-5 block">신용 관리</span>
+                <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-8">
+                    월급만 제때 받아도<br>
+                    <span class="text-[#3182F6]">신용점수가 올라가요.</span>
+                </h2>
+                <p class="text-[#4E5968] text-xl leading-relaxed mb-10">
+                    꾸준한 월급 수령 이력으로 금융 신용도를 증명하세요.<br>
+                    올라간 신용점수로 1금융권 저금리 대출 상품을<br>
+                    Paylance 전용 혜택으로 만날 수 있습니다.
+                </p>
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center text-xs font-bold text-black">K</div>
+                        <span class="font-bold text-[#333D4B] text-lg">카카오뱅크 제휴 완료</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-xs font-bold text-white">S</div>
+                        <span class="font-bold text-[#333D4B] text-lg">신한은행 제휴 완료</span>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 scroll-animate fade-up delay-200">
+                <div class="mockup-frame">
+                    <div class="placeholder">
+                        <span class="text-5xl mb-4">📈</span>
+                        금융 상품 UI<br>이미지 영역
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-28 border-t border-gray-100">
+        <div class="max-w-screen-md mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-14">사장님의 소중한 데이터, 은행만큼 안전하게</h3>
+            <div class="flex flex-col md:flex-row justify-center gap-10">
+                <div class="flex-1 bg-gray-50 p-8 rounded-3xl scroll-animate fade-up">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-4xl mb-6 mx-auto shadow-sm">🔒</div>
+                    <h4 class="font-bold text-xl mb-3">금융권 수준 보안</h4>
+                    <p class="text-[#6B7684]">모든 데이터는 암호화되어<br>안전하게 관리됩니다.</p>
+                </div>
+                <div class="flex-1 bg-gray-50 p-8 rounded-3xl scroll-animate fade-up delay-100">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-4xl mb-6 mx-auto shadow-sm">🛡️</div>
+                    <h4 class="font-bold text-xl mb-3">철저한 목적 제한</h4>
+                    <p class="text-[#6B7684]">오직 월급 분석과 금융 혜택<br>제공에만 사용됩니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apply" class="py-36 bg-[#F9FAFB]">
+        <div class="max-w-md mx-auto px-6">
+            <div class="bg-white rounded-[40px] p-10 md:p-12 shadow-xl text-center scroll-animate fade-up border border-gray-100">
+                <span class="bg-blue-50 text-[#3182F6] font-bold px-4 py-1.5 rounded-full text-sm mb-8 inline-block">사전 신청 한정 혜택</span>
+                <h2 class="text-4xl font-bold mb-4">가장 먼저<br>페이랜스를 만나보세요</h2>
+                <p class="text-[#4E5968] mb-12 text-base">출시 알림 신청 시,<br><strong>초기 서비스 이용 수수료 0원</strong> 혜택을 드립니다.</p>
+
+                <form class="space-y-6 text-left">
+                    <div>
+                        <label class="block text-sm font-bold text-[#8B95A1] mb-2 ml-1">휴대폰 번호</label>
+                        <input type="tel" placeholder="010-1234-5678" class="w-full bg-[#F2F4F6] text-[#191F28] border-none rounded-2xl px-6 py-5 text-xl font-bold focus:ring-2 focus:ring-[#3182F6] transition placeholder-[#B0B8C1]">
+                    </div>
+
+                    <label class="flex items-start gap-3 cursor-pointer p-1">
+                        <input type="checkbox" class="mt-1 w-5 h-5 rounded border-gray-300 text-[#3182F6] focus:ring-[#3182F6]">
+                        <span class="text-sm text-[#8B95A1] leading-snug">
+                            [필수] 개인정보 수집 및 이용 동의<br>
+                            수집된 정보는 출시 알림 발송 후 즉시 파기됩니다.
+                        </span>
+                    </label>
+
+                    <button type="button" class="w-full bg-[#3182F6] hover:bg-[#1B64DA] text-white font-bold text-xl py-5 rounded-2xl mt-4 transition-all transform active:scale-95 shadow-lg shadow-blue-500/30">
+                        알림 신청하고 혜택 받기
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#F2F4F6] py-16 text-[#8B95A1] text-sm leading-relaxed border-t border-gray-200">
+        <div class="max-w-screen-lg mx-auto px-6">
+            <h5 class="font-bold text-[#4E5968] mb-4 text-base">금융소비자 보호를 위한 유의사항</h5>
+            <ul class="space-y-2 list-disc pl-5 mb-8">
+                <li>페이랜스는 직접 대출을 실행하는 금융기관이 아니며, 제휴 금융사의 대출 상품을 중개하는 온라인 대출모집법인입니다.</li>
+                <li>대출 가능 여부 및 이자율, 한도는 금융사의 심사 기준에 따라 달라질 수 있습니다.</li>
+                <li>대출금리: 연 최저 3.5% ~ 최고 19.9% (2026.01.28 기준, 변동 가능)</li>
+                <li>중개 수수료를 요구하거나 받는 것은 불법입니다. 과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다.</li>
+                <li>대출 시 신용등급 또는 개인신용평점이 하락할 수 있으며, 이로 인해 금융거래의 제약이 발생할 수 있습니다.</li>
+                <li>계약을 체결하기 전에 금융상품설명서와 약관을 확인하시기 바랍니다.</li>
+                <li>금융소비자는 금융소비자보호법 제19조 제1항에 따라 해당 금융상품 또는 서비스에 대하여 설명을 받을 권리가 있습니다.</li>
+            </ul>
+            <div class="flex flex-wrap gap-4 text-xs">
+                <span>심의필 번호: 2026-01-28-001호</span>
+                <span>|</span>
+                <span>금융감독원 등록번호: 제2026-서울강남-0000호</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-[#F9FAFB] border-t border-gray-200 text-[#8B95A1] text-sm">
+        <div class="max-w-screen-lg mx-auto px-6">
+            <div class="flex items-center gap-2 mb-6">
+                <span class="text-[#333D4B] font-bold text-xl">Paylance</span>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8 md:gap-20">
+                <div class="leading-loose">
+                    <p class="font-bold text-[#4E5968] mb-2">(주)페이랜스</p>
+                    <p>대표: 홍길동 | 사업자등록번호: 123-45-67890</p>
+                    <p>서울시 강남구 테헤란로 123, 페이랜스빌딩 10층</p>
+                    <p>통신판매업신고: 2026-서울강남-00000</p>
+                </div>
+                <div class="leading-loose">
+                    <p class="font-bold text-[#4E5968] mb-2">고객센터</p>
+                    <p>전화: 1599-0000 (평일 09:00 - 18:00)</p>
+                    <p>이메일: help@paylance.kr</p>
+                    <div class="flex gap-4 mt-4">
+                        <a href="#" class="hover:text-[#333D4B] transition-colors">서비스 이용약관</a>
+                        <a href="#" class="font-bold text-[#333D4B] hover:text-black transition-colors">개인정보 처리방침</a>
+                        <a href="#" class="hover:text-[#333D4B] transition-colors">금융소비자보호</a>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-12 text-xs">© 2026 Paylance Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.scroll-animate').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
