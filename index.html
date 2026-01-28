@@ -276,34 +276,51 @@
     </section>
 
     <section id="apply" class="py-24 md:py-32 bg-[#0F172A] relative overflow-hidden text-center">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-[#0055FF] opacity-20 blur-[80px] md:blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-[#0055FF] opacity-20 blur-[80px] md:blur-[120px] rounded-full pointer-events-none"></div>
 
-        <div class="max-w-lg mx-auto px-6 relative z-10 scroll-animate fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">가장 먼저<br>페이랜스를 경험하세요</h2>
-            <p class="text-gray-400 mb-10 text-base md:text-lg">사전 알림 신청 시,<br><span class="text-white font-bold underline">초기 서비스 이용 수수료 0원</span> 혜택을 드립니다.</p>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {alert('사전 알림 신청이 완료되었습니다! 출시 후 가장 먼저 연락드릴게요.'); location.reload();}"></iframe>
 
-            <div class="bg-white/5 backdrop-blur-sm p-6 md:p-8 rounded-3xl border border-white/10">
-                <form class="space-y-4">
-                    <div class="text-left">
-                        <label class="text-xs font-bold text-gray-400 ml-1 mb-2 block uppercase">휴대폰 번호</label>
-                        <input type="tel" placeholder="010-1234-5678" class="w-full bg-[#1E293B] border border-gray-600 text-white px-5 py-4 rounded-xl focus:border-[#0055FF] focus:ring-1 focus:ring-[#0055FF] outline-none transition placeholder-gray-600 font-bold text-lg">
-                    </div>
+    <div class="max-w-lg mx-auto px-6 relative z-10 scroll-animate fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">가장 먼저<br>페이랜스를 경험하세요</h2>
+        <p class="text-gray-400 mb-10 text-base md:text-lg">사전 알림 신청 시,<br><span class="text-white font-bold underline">초기 서비스 이용 수수료 0원</span> 혜택을 드립니다.</p>
+
+        <div class="bg-white/5 backdrop-blur-sm p-6 md:p-8 rounded-3xl border border-white/10">
+            
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSf0tIHPlKXCinzCffr8yxDb2DyMHoKTR6VwnvJMsCwCNVk7yA/formResponse" 
+                method="post" 
+                target="hidden_iframe" 
+                onsubmit="submitted=true;" 
+                class="space-y-4">
+                
+                <div class="text-left">
+                    <label class="text-xs font-bold text-gray-400 ml-1 mb-2 block uppercase">휴대폰 번호</label>
                     
-                    <div class="flex items-start gap-3 text-left px-1">
-                        <input type="checkbox" id="agree" class="mt-1 w-5 h-5 rounded border-gray-600 bg-gray-800 text-[#0055FF] focus:ring-0 cursor-pointer flex-shrink-0">
-                        <label for="agree" class="text-sm text-gray-400 leading-snug cursor-pointer select-none">
-                            [필수] 개인정보 수집 및 이용 동의<br>
-                            <span class="text-xs text-gray-500">수집된 정보는 출시 알림 발송 후 즉시 파기됩니다.</span>
-                        </label>
-                    </div>
+                    <input type="tel" 
+                        name="entry.2141774112" 
+                        placeholder="010-1234-5678" 
+                        required
+                        class="w-full bg-[#1E293B] border border-gray-600 text-white px-5 py-4 rounded-xl focus:border-[#0055FF] focus:ring-1 focus:ring-[#0055FF] outline-none transition placeholder-gray-600 font-bold text-lg">
+                </div>
+                
+                <div class="flex items-start gap-3 text-left px-1">
+                    <input type="checkbox" id="agree" required class="mt-1 w-5 h-5 rounded border-gray-600 bg-gray-800 text-[#0055FF] focus:ring-0 cursor-pointer flex-shrink-0">
+                    <label for="agree" class="text-sm text-gray-400 leading-snug cursor-pointer select-none">
+                        [필수] 개인정보 수집 및 이용 동의<br>
+                        <span class="text-xs text-gray-500">수집된 정보는 출시 알림 발송 후 즉시 파기됩니다.</span>
+                    </label>
+                </div>
 
-                    <button type="button" class="w-full bg-[#0055FF] hover:bg-blue-600 text-white font-bold text-lg py-4 rounded-xl shadow-lg shadow-blue-900/50 mt-4 transition transform active:scale-95">
-                        알림 신청하고 혜택 받기
-                    </button>
-                </form>
-            </div>
+                <button type="submit" class="w-full bg-[#0055FF] hover:bg-blue-600 text-white font-bold text-lg py-4 rounded-xl shadow-lg shadow-blue-900/50 mt-4 transition transform active:scale-95">
+                    알림 신청하고 혜택 받기
+                </button>
+            </form>
         </div>
+    </div>
     </section>
+
+<script type="text/javascript">
+    var submitted = false;
+</script>
 
     <section class="bg-[#F2F4F6] py-12 text-[#8B95A1] text-xs leading-relaxed border-t border-gray-200">
         <div class="max-w-screen-lg mx-auto px-6">
@@ -316,36 +333,8 @@
                 <li>대출 시 신용등급 또는 개인신용평점이 하락할 수 있으며, 이로 인해 금융거래의 제약이 발생할 수 있습니다.</li>
                 <li>계약을 체결하기 전에 금융상품설명서와 약관을 확인하시기 바랍니다.</li>
             </ul>
-            <div class="flex flex-wrap gap-2 text-[11px] opacity-80">
-                <span>심의필 번호: 2026-01-28-001호</span>
-                <span>|</span>
-                <span>금융감독원 등록번호: 제2026-서울강남-0000호</span>
-            </div>
         </div>
     </section>
-
-    <footer class="py-12 bg-[#F9FAFB] border-t border-gray-200 text-[#8B95A1] text-xs">
-        <div class="max-w-screen-lg mx-auto px-6">
-            <div class="flex items-center gap-2 mb-6">
-                <span class="text-[#333D4B] font-bold text-lg">Paylance</span>
-            </div>
-            <div class="flex flex-col md:flex-row gap-8 md:gap-20">
-                <div class="leading-loose">
-                    <p class="font-bold text-[#4E5968] mb-1">(주)페이랜스</p>
-                    <p>대표: 홍길동 | 사업자등록번호: 123-45-67890</p>
-                    <p>서울시 강남구 테헤란로 123, 페이랜스빌딩 10층</p>
-                    <p>통신판매업신고: 2026-서울강남-00000</p>
-                </div>
-                <div class="leading-loose">
-                    <p class="font-bold text-[#4E5968] mb-1">고객센터</p>
-                    <p>전화: 1599-0000 (평일 09:00 - 18:00)</p>
-                    <p>이메일: help@paylance.kr</p>
-                </div>
-            </div>
-            <p class="mt-8 opacity-60">© 2026 Paylance Inc. All rights reserved.</p>
-        </div>
-    </footer>
-
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
